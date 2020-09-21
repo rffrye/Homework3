@@ -7,8 +7,10 @@ var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var special = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 //console log to test 
-  console.log("lowercase"[0]);
-
+  console.log(lowerCase);
+  console.log(upperCase);
+  console.log(special);
+  console.log(number);
 
 //Variables for prompts
 var confirmLength = "";
