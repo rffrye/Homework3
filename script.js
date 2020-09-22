@@ -29,4 +29,10 @@ function generatePassword() {
     } 
     
     else (alert ("Your password will have " + confirmLength + " characters."))
+
+    //parameter confirms chosen by user
+    var confirmSpecial = confirm("Click OK to confirm if you would like to include special characters");
+    var confirmNumber= confirm("Click OK to confirm if you would like to include numeric characters");    
+    var confirmLower = confirm("Click OK to confirm if you would like to include lowercase characters");
+    var confirmUpper = confirm("Click OK to confirm if you would like to include uppercase characters");
   }
