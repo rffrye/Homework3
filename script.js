@@ -28,7 +28,7 @@ function generatePassword() {
         var confirmLength = (prompt("How many characters would you like your password to contain?"));
     } 
     
-    else (alert ("Your password will have " + confirmLength + " characters."))
+    else (alert ("Your password will have " + confirmLength + " characters."));
 
     //parameter confirms chosen by user
     var confirmSpecial = confirm("Click OK to confirm if you would like to include special characters");
@@ -46,3 +46,6 @@ function generatePassword() {
   } 
 
   }
+
+  // Add event listener to generate button
+generateBtn.addEventListener("click", generatePassword);
