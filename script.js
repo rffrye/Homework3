@@ -45,7 +45,38 @@ function generatePassword() {
     var confirmUpper = confirm("Click OK to confirm if you would like to include uppercase characters");   
   } 
 
-  }
+    // Assign an action to the password parameters
+    var passwordCharacters = []
+        
+    if (confirmSpecial) {
+      passwordCharacters = passwordCharacters.concat(special)
+    }
+  
+    if (confirmNumber) {
+      passwordCharacters = passwordCharacters.concat(number)
+    }
+      
+    if (confirmLower) {
+      passwordCharacters = passwordCharacters.concat(lowerCase)
+    }
+  
+    if (confirmUpper) {
+      passwordCharacters = passwordCharacters.concat(upperCase)
+    }
+  
+      console.log(passwordCharacters)
+  
+      // String to be filled based on for loop selecting random characters
+      var randomPassword = ""
+      
+      for (var i = 0; i < confirmLength; i++) {
+        randomPassword = randomPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
+        
+        console.log(randomPassword)
+      }
+      return randomPassword;
+}
+  
 
   // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
