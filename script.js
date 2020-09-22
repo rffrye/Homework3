@@ -35,4 +35,14 @@ function generatePassword() {
     var confirmNumber= confirm("Click OK to confirm if you would like to include numeric characters");    
     var confirmLower = confirm("Click OK to confirm if you would like to include lowercase characters");
     var confirmUpper = confirm("Click OK to confirm if you would like to include uppercase characters");
+  
+  // Loop if answer is outside the parameters 
+  if(confirmUpper === false && confirmLower === false && confirmSpecial === false && confirmNumber === false) {
+    alert("You must choose at least one parameter");
+    var confirmSpecial = confirm("Click OK to confirm if you would like to include special characters");
+    var confirmNumber = confirm("Click OK to confirm if you would like to include numeric characters");    
+    var confirmLower = confirm("Click OK to confirm if you would like to include lowercase characters");
+    var confirmUpper = confirm("Click OK to confirm if you would like to include uppercase characters");   
+  } 
+
   }
