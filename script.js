@@ -1,5 +1,9 @@
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+
+  // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
 
 // Character Arrays by type
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -68,15 +72,18 @@ function generatePassword() {
   
       // String to be filled based on for loop selecting random characters
       var randomPassword = ""
-      
+       
       for (var i = 0; i < confirmLength; i++) {
         randomPassword = randomPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
-        
-        console.log(randomPassword)
+        console.log(randomPassword);
       }
       return randomPassword;
 }
-  
+ 
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-  // Add event listener to generate button
-generateBtn.addEventListener("click", generatePassword);
+  passwordText.value = password
+}
